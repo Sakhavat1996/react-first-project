@@ -11,7 +11,7 @@ import TabButton from "./components/Button/TabButton";
 import { useState } from "react";
 import { DATA_TAB } from "./components/data/dataTab";
 
-const cities = ["Baku", "Sumgait", "Ganja" , 'Mingaceur'];
+const cities = ["Baku", "Sumgait", "Ganja" , 'Mingaceur' , 'Khankendi'];
 function getIndex(max) {
   return Math.floor(Math.random() * (max + 1));
 }
