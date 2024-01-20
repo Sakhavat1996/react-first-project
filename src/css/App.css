@@ -1,0 +1,81 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+ul{
+  display: flex;
+  grid-gap: 25px;
+  padding: 20px;
+}
+.tab{
+  background-color: black;
+}
+ul li {
+  list-style-type: none;
+}
+li p {
+  text-align: left;
+}
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #370707;
+  font-size: 20px;
+}
+.review-list{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
+.review-card{
+  background-color: #8a8787;
+  padding: 28px 32px;
+  display: grid;
+  border-radius: 10px;
+  text-align: left;
+}
+.review-card .review-header{
+  display: flex;
+  justify-content: space-between;
+  grid-gap: 15px;
+}
+.review-card .review-body{
+  display: grid;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+button.active{
+  background-color: rgb(78, 6, 78);
+  color: white;
+}
