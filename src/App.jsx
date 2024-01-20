@@ -11,7 +11,7 @@ import TabButton from "./components/Button/TabButton";
 import { useState } from "react";
 import { DATA_TAB } from "./components/data/dataTab";
 
-const cities = ["Baku", "Sumgait", "Ganja"];
+const cities = ["Baku", "Sumgait", "Ganja" , 'Mingaceur'];
 function getIndex(max) {
   return Math.floor(Math.random() * (max + 1));
 }
@@ -24,7 +24,7 @@ function App() {
   function handleClick(selectedValue){
     setState(selectedValue)
   }
-  const selectedCity = cities[getIndex(2)];
+  const selectedCity = cities[getIndex(3)];
   // 2.ci yol
   /*
     let tabContent = <p>Birini secin</p>;
