@@ -1,10 +1,12 @@
-import './header.css'
+import classes from './header.module.css'
 function Header(props){
-  const {title} = {...props}
+  const {title} = {...props};
+
     return (
-      <header className="header">
+      <header className={classes.header}>
         <a href="#">Logo {title}</a>
-        <p><b>First Project</b></p>
+        <p className={classes['header-text']}> Header Text</p>
+        <p className={classes['header-text']}><b>First Project</b></p>
       </header>
     )
 }

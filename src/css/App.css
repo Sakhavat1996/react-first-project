@@ -10,6 +10,9 @@ ul{
 }
 .tab{
   background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 ul li {
   list-style-type: none;
@@ -58,13 +61,6 @@ li p {
   grid-template-columns: 1fr 1fr;
   grid-gap: 20px;
 }
-.review-card{
-  background-color: #8a8787;
-  padding: 28px 32px;
-  display: grid;
-  border-radius: 10px;
-  text-align: left;
-}
 .review-card .review-header{
   display: flex;
   justify-content: space-between;
@@ -78,4 +74,12 @@ li p {
 button.active{
   background-color: rgb(78, 6, 78);
   color: white;
+}
+.text-title{
+  color: rgb(82, 56, 7);
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.text-title.green{
+  color: #16048de0;
 }

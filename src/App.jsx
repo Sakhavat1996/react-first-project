@@ -6,25 +6,31 @@ import reactIcon from "./assets/react.svg";
 import viteIcon from "./assets/vite.svg";
 import { DATA_LIST } from "./components/data/data";
 import { DATA_REVIEWS } from "./components/data/dataReview";
-import Card from "./components/Cards/Card";
+import Card, { StudentCard } from "./components/Cards/Card";
 import TabButton from "./components/Button/TabButton";
 import { useState } from "react";
 import { DATA_TAB } from "./components/data/dataTab";
+import { styled } from "styled-components"
 
 const cities = ["Baku", "Sumgait", "Ganja" , 'Mingaceur' , 'Khankendi' , 'Shusha'];
 function getIndex(max) {
   return Math.floor(Math.random() * (max + 1));
 }
-// const {title , brand , year} = {title:"Phone",brand:"IPhone",year:"2011" }
-
+const ListContainer = styled.ul`
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+`
 
 function App() {
   const [state , setState] = useState(null);
+  const [flag , setFlag] = useState()
 
   function handleClick(selectedValue){
     setState(selectedValue)
   }
-  const selectedCity = cities[getIndex(3)];
+  const selectedCity = cities[getIndex(5)];
   // 2.ci yol
   /*
     let tabContent = <p>Birini secin</p>;
@@ -44,7 +50,7 @@ function App() {
       <h1>Vite + React</h1>
       <img src={reactIcon} alt={reactIcon} />
       <img src={viteIcon} alt={viteIcon} />
-      <ul className="tab">
+      <ListContainer className="list">
         <TabButton 
           isSelected = {state === 'react'}
           onMyClick={()=>handleClick('react')}
@@ -69,7 +75,7 @@ function App() {
           >
           TypeScript
         </TabButton>
-      </ul>
+      </ListContainer>
       <div>
         {
           // 1ci yol
@@ -85,7 +91,7 @@ function App() {
         }
       </div>
       
-      <p className="read-the-docs">
+      <p className="text read-the-docs">
         {selectedCity} is the one the biggest cities of Azerbaijan
       </p>
       <div className="review-list">
@@ -102,6 +108,16 @@ function App() {
           })
         }
       </ul>
+      
+      <StudentCard>
+        <p 
+        className={`text-title ${flag ? 'green' : undefined}`}
+        // style ={{color: flag ? 'red' : "green"  }}
+        > Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe eveniet tempore reiciendis, error ut eaque atque quos. Aspernatur enim quae ipsa qui deleniti. Quas libero distinctio, mollitia porro ea quisquam.</p>
+        <button onClick={()=>setFlag('green')}>Click to change green color</button>
+        
+      </StudentCard>
+
       
 
       <Footer logo='Logo' name="Antec"/>
